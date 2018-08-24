@@ -1,8 +1,8 @@
 <?php
 
-function insertProduct($conn, $name, $price)
+function insertProduct($conn, $name, $price, $description)
 {
-    $query = "insert into products (name, price) values ('{$name}',{$price})";
+    $query = "insert into products (name, price, description) values ('{$name}',{$price}, '{$description}')";
     return mysqli_query($conn, $query);
 }
 
@@ -13,4 +13,9 @@ function listProducts($conn){
         array_push($products,$product);
     }
     return $products;
+}
+
+function removeProduct($conn, $id){
+    $query = "delete from products where id = {$id}";
+    return mysqli_query($conn,$query);
 }

@@ -2,7 +2,7 @@
 
     <h1>Product's form</h1>
 
-    <form action="add-product.php">
+    <form action="add-product.php" method="post">
         <table class="table">
             <tr>
                 <td>Name: </td> 
@@ -11,6 +11,10 @@
             <tr>
                 <td>Price: </td>
                 <td><input class="form-control" type="number" name="price"></td>
+            </tr>
+            <tr>
+                <td>Description: </td>
+                <td><textarea class="form-control" name="description"></textarea></td>
             </tr>
             <tr>
                 <td><input class="btn btn-primary" type="submit" value="Add"></td>

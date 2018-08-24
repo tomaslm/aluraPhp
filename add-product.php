@@ -4,10 +4,11 @@
 
 <?php
 
-$name = $_GET["name"];
-$price = $_GET["price"];
+$name = $_POST["name"];
+$price = $_POST["price"];
+$description = $_POST["description"];
 
-if (insertProduct($conn, $name, $price)) {?>
+if (insertProduct($conn, $name, $price, $description)) {?>
     <p class="text-success"  > Product <?php echo $name; ?> added with success, price = <?php echo $price ?></p>
 <?php } else {
     $msg = mysqli_error($conn);
