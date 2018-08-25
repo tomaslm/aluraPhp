@@ -1,19 +1,22 @@
-CREATE TABLE products(
-    id INTEGER AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(255),
-    price DECIMAL(10, 2)
-);
-
-ALTER TABLE
-    products ADD COLUMN description TEXT;
-
 CREATE TABLE category(
     id INTEGER AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(255)
 );
 
-ALTER TABLE
-    products ADD COLUMN category_id INTEGER;
+CREATE TABLE products(
+    id INTEGER AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255),
+    price DECIMAL(10, 2),
+);
 
 ALTER TABLE
-    products ADD CONSTRAINT FOREIGN KEY(category_id) REFERENCES category(ID)
+    products ADD COLUMN description TEXT;
+
+ALTER TABLE
+    products ADD COLUMN category_id INTEGER NOT NULL;
+
+ALTER TABLE
+    products ADD CONSTRAINT FOREIGN KEY(category_id) REFERENCES category(ID);
+
+ALTER TABLE
+    products ADD COLUMN used BOOLEAN DEFAULT FALSE

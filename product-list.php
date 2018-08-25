@@ -10,11 +10,20 @@ include "connect.php";?>
 }
 ?>
 <table class="table table-striped table-bordered">
+
+    <tr>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Description</th>
+        <th>Category</th>
+        <th>Used</th>
+        <th>Change</th>
+        <th>Remove</th>
+    </tr>
     <?php
 $products = listProducts($conn);
 foreach ($products as $product) {
     ?>
-
     <tr>
         <td>
             <?=$product['name']?>
@@ -27,6 +36,14 @@ foreach ($products as $product) {
         </td>
         <td>
             <?=$product['category_name']?>
+        </td>
+        <td>
+            <?=$product['used'] ? "true" : "false"?>
+        </td>
+        <td>
+            <a class="btn btn-primary" href="product-change-form.php?id=<?=$product['id']?>">
+                Change
+            </a>
         </td>
         <td>
             <form action="remove-product.php"

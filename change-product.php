@@ -4,6 +4,7 @@
 
 <?php
 
+$id = $_POST["id"];
 $name = $_POST["name"];
 $price = $_POST["price"];
 $description = $_POST["description"];
@@ -14,9 +15,9 @@ if (array_key_exists("used", $_POST)) {
     $used = "false";
 }
 
-if (insertProduct($conn, $name, $price, $description, $category_id, $used)) {?>
+if (changeProduct($conn, $id, $name, $price, $description, $category_id, $used)) {?>
 <p class="text-success"> Product
-    <?php echo $name; ?> added with success,
+    <?php echo $name; ?> changed with success,
     price =
     <?php echo $price ?>
 </p>
@@ -25,7 +26,7 @@ if (insertProduct($conn, $name, $price, $description, $category_id, $used)) {?>
     ?>
 <p class="text-danger"> Product
     <?php echo $name; ?> has not been
-    added.Error:
+    changed. Error:
     <?php echo $msg ?>
 </p>
 <?php
