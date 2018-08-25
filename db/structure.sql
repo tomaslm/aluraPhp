@@ -6,3 +6,14 @@ CREATE TABLE products(
 
 ALTER TABLE
     products ADD COLUMN description TEXT;
+
+CREATE TABLE category(
+    id INTEGER AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255)
+);
+
+ALTER TABLE
+    products ADD COLUMN category_id INTEGER;
+
+ALTER TABLE
+    products ADD CONSTRAINT FOREIGN KEY(category_id) REFERENCES category(ID)
