@@ -1,7 +1,7 @@
 <?php 
-
+session_start();
 function isUserLogged(){
-    return isset($_COOKIE["logged_user"]);
+    return isset($_SESSION["logged_user"]);
 }
 
 function verifyUser(){    
@@ -12,9 +12,12 @@ function verifyUser(){
 }
 
 function getLoggedUser(){
-    return $_COOKIE["logged_user"];
+    return $_SESSION["logged_user"];
 }
 
 function loginUser($email){
-    setcookie("logged_user", $email, time() + 60);
+    $_SESSION["logged_user"] = $email;
+}
+function logout(){
+    session_destroy();
 }

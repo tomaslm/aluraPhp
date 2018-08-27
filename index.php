@@ -1,7 +1,10 @@
 <?php include "header.php";
 include "user-logic.php";
 
-if (isset($_GET["logged"]) && $_GET["logged"] == true) {
+if (isset($_GET["logout"]) && $_GET["logout"] == true) {
+    ?>
+    <p class="alert-success">Logged out with success</p>
+<?php }if (isset($_GET["logged"]) && $_GET["logged"] == true) {
     ?>
     <p class="alert-success">Logged with success</p>
 <?php } else if(isset($_GET["logged"]) && $_GET["logged"] == false) {?>
@@ -18,7 +21,7 @@ if (isset($_GET["logged"]) && $_GET["logged"] == true) {
 </h1>
 <?php if(isUserLogged()){
     ?>
-<p class="text-success">Welcome <?=getLoggedUser()?></p>
+<p class="text-success">Welcome <?=getLoggedUser()?></p><a href="logout.php">Logout</a>
     <?php
 } else {
 ?>
