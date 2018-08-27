@@ -4,7 +4,7 @@ include "db-category.php";
 include "db-product.php";
 
 $id = $_GET['id'];
-$product = find_product($conn, $id);
+$product = findProduct($conn, $id);
 $used = $product['used'] ? "checked='checked'" : "";
 ?>
 

@@ -1,6 +1,9 @@
 <?php include "header.php";
 include "connect.php";
 include "db-category.php";
+include "user-logic.php";
+
+verifyUser();
 ?>
 
 <h1>Product's form</h1>

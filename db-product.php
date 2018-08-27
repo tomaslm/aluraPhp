@@ -30,7 +30,7 @@ function removeProduct($conn, $id)
     return mysqli_query($conn, $query);
 }
 
-function find_product($conn, $id)
+function findProduct($conn, $id)
 {
     $query = "select * from products where id = {$id}";
     $result = mysqli_query($conn, $query);

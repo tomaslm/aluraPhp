@@ -6,7 +6,7 @@ CREATE TABLE category(
 CREATE TABLE products(
     id INTEGER AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(255),
-    price DECIMAL(10, 2),
+    price DECIMAL(10, 2)
 );
 
 ALTER TABLE
@@ -19,4 +19,10 @@ ALTER TABLE
     products ADD CONSTRAINT FOREIGN KEY(category_id) REFERENCES category(ID);
 
 ALTER TABLE
-    products ADD COLUMN used BOOLEAN DEFAULT FALSE
+    products ADD COLUMN used BOOLEAN DEFAULT FALSE;
+
+CREATE TABLE users(
+    id INTEGER AUTO_INCREMENT PRIMARY KEY,
+    email VARCHAR(255),
+    password VARCHAR(255)
+);

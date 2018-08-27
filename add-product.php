@@ -1,8 +1,8 @@
-<?php include "header.php"?>
-<?php include "connect.php"?>
-<?php include "db-product.php"?>
-
-<?php
+<?php include "header.php";
+include "connect.php";
+include "db-product.php";
+include "user-logic.php";
+verifyUser();
 
 $name = $_POST["name"];
 $price = $_POST["price"];
