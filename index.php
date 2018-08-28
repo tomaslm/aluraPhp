@@ -1,5 +1,5 @@
-<?php include "header.php";
-include "user-logic.php";
+<?php require_once "header.php";
+require_once "user-logic.php";
 ?>
 
 <h1>Store in php!
@@ -32,4 +32,4 @@ include "user-logic.php";
 <?php
 }
 ?>
-<?php include "footer.php"?>
+<?php require_once "footer.php"?>

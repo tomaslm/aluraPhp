@@ -1,6 +1,6 @@
 <?php
 error_reporting(E_ALL ^ E_NOTICE);
-include "show-alert.php";
+require_once "show-alert.php";
 ?>
 <html>
 

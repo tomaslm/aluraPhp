@@ -1,6 +1,6 @@
-<?php include "header.php";
-include "db-product.php";
-include "connect.php";
+<?php require_once "header.php";
+require_once "db-product.php";
+
 ?>
 
 <table class="table table-striped table-bordered">
@@ -55,4 +55,4 @@ foreach ($products as $product) {
 </table>
 
 
-<?php include "footer.php"?>
+<?php require_once "footer.php"?>

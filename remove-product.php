@@ -1,6 +1,6 @@
-<?php include "header.php";
-include "db-product.php";
-include "connect.php";
+<?php require_once "header.php";
+require_once "db-product.php";
+
 
 $id = $_POST['id'];
 
@@ -13,4 +13,4 @@ die();
 <p class="text-success"> Product
     <?=$id?> removed </p>
 
-<?php include "footer.php"?>
+<?php require_once "footer.php"?>

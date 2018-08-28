@@ -1,4 +1,5 @@
 <?php
+require_once "connect.php";
 
 function insertProduct($conn, $name, $price, $description, $category_id, $used)
 {

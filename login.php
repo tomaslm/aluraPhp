@@ -1,6 +1,6 @@
-<?php include "connect.php";
-include "db-user.php";
-include "user-logic.php";
+<?php 
+require_once "db-user.php";
+require_once "user-logic.php";
 
 $user = findUser($conn, $_POST["email"], $_POST["password"]);
 

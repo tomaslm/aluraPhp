@@ -1,7 +1,7 @@
-<?php include "header.php";
-include "connect.php";
-include "db-product.php";
-include "user-logic.php";
+<?php require_once "header.php";
+
+require_once "db-product.php";
+require_once "user-logic.php";
 verifyUser();
 
 $name = $_POST["name"];
@@ -35,4 +35,4 @@ mysqli_close($conn);
 ?>
 
 
-<?php include "footer.php"?>
+<?php require_once "footer.php"?>

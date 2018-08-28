@@ -1,6 +1,6 @@
-<?php include "header.php"?>
-<?php include "connect.php"?>
-<?php include "db-product.php"?>
+<?php require_once "header.php"?>
+<?php require_once "connect.php"?>
+<?php require_once "db-product.php"?>
 
 <?php
 
@@ -36,4 +36,4 @@ mysqli_close($conn);
 ?>
 
 
-<?php include "footer.php"?>
+<?php require_once "footer.php"?>
