@@ -1,14 +1,8 @@
 <?php include "header.php";
 include "db-product.php";
-include "connect.php";?>
-
-<?php if (array_key_exists('removed', $_GET) && $_GET['removed'] == true) {
-    ?>
-<p class="alert-success">Product deleted with
-    success</p>
-<?php
-}
+include "connect.php";
 ?>
+
 <table class="table table-striped table-bordered">
 
     <tr>

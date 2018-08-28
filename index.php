@@ -1,20 +1,6 @@
 <?php include "header.php";
 include "user-logic.php";
-
-if (isset($_GET["logout"]) && $_GET["logout"] == true) {
-    ?>
-    <p class="alert-success">Logged out with success</p>
-<?php }if (isset($_GET["logged"]) && $_GET["logged"] == true) {
-    ?>
-    <p class="alert-success">Logged with success</p>
-<?php } else if(isset($_GET["logged"]) && $_GET["logged"] == false) {?>
-    <p class="alert-danger">Login failed</p>
-
-<?php } ?>
-
-<?php if(isset($_GET["security_error"]) && $_GET["security_error"] == true) { ?>
-    <p class="alert-alert-danger">You don't have access to this functionality</p>
-<?php }?>
+?>
 
 <h1>Store in php!
     <?php //phpinfo()?>

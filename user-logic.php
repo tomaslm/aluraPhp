@@ -6,7 +6,8 @@ function isUserLogged(){
 
 function verifyUser(){    
     if(!isUserLogged()){
-        header("Location: index.php?security_error=true");
+        $_SESSION["danger"] = "You don't have access to this functionality.";
+        header("Location: index.php");
         die();
     }
 }
@@ -20,4 +21,5 @@ function loginUser($email){
 }
 function logout(){
     session_destroy();
+    session_start();
 }

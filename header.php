@@ -1,3 +1,7 @@
+<?php
+error_reporting(E_ALL ^ E_NOTICE);
+include "show-alert.php";
+?>
 <html>
 
 <head>
@@ -36,3 +40,7 @@
 
     <div class="container">
         <div class="principal">
+        <?php
+showAlert("success");
+showAlert("danger");
+?>

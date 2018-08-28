@@ -5,7 +5,8 @@ include "connect.php";
 $id = $_POST['id'];
 
 removeProduct($conn, $id);
-header("Location: product-list.php?removed=true");
+$_SESSION["success"] = "Deleted with success";
+header("Location: product-list.php");
 die();
 ?>
 

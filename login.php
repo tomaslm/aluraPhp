@@ -8,6 +8,7 @@ $logged = $user != null;
 if ($logged) {
     loginUser($user["email"]);
 } else {
+    $_SESSION["danger"] = "Invalid user or password.";
 }
-header("Location: index.php?logged={$logged}");
+header("Location: index.php");
 die();
