@@ -3,12 +3,16 @@ require_once "connect.php";
 
 function insertProduct($conn, $name, $price, $description, $category_id, $used)
 {
+    $name = mysqli_real_escape_string($name);
+    $description = mysqli_real_escape_string($description);
     $query = "insert into products (name, price, description, category_id, used)
     values ('{$name}',{$price}, '{$description}', {$category_id}, {$used} )";
     return mysqli_query($conn, $query);
 }
 function changeProduct($conn, $id, $name, $price, $description, $category_id, $used)
 {
+    $name = mysqli_real_escape_string($name);
+    $description = mysqli_real_escape_string($description);
     $query = "update products set name='{$name}', price={$price},
     description='{$description}', category_id={$category_id}, used={$used}
     where id = {$id}";

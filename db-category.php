@@ -3,7 +3,8 @@ require_once "connect.php";
 
 function insertCategory($conn, $name)
 {
-    $query = "insert into category (name) values ('{$name}')";
+    $name = mysqli_real_escape_string($name);
+    $query = mysqli_real_escape_string("insert into category (name) values ('{$name}')");
     return mysqli_query($conn, $query);
 }
 

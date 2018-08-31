@@ -31,7 +31,7 @@ require_once "show-alert.php";
                     <a class="nav-link" href="product-list.php">Products</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="o.php">About</a>
+                    <a class="nav-link" href="contact.php">Contact</a>
                 </li>
             </ul>
         </div>
